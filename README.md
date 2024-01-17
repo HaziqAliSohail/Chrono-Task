@@ -7,43 +7,38 @@ Features:
   Efficiency: Minimal resource consumption, ideal for various environments.
   Logging: Comprehensive logs and reporting for task executions.
 
-Getting Started:
+# Getting Started:
 
-    Clone the Repository:
+Clone the Repository:
 
-    bash
-
-git clone https://github.com/HaziqAliSohail/Chrono-Task.git
+    git clone https://github.com/HaziqAliSohail/Chrono-Task.git
 
 Configure Tasks:
 
-    Edit the config.yaml file to define your tasks and their execution schedules.
+ Edit the config.yaml file to define your tasks and their execution schedules.
 
 Build and Run:
-
-bash
 
     go build
     ./Chrono-Task
 
 Example Configuration (config.yaml):
 
-yaml
+    tasks:
+    - name: "BackupData"
+      schedule: "0 2 * * *"
+      command: "bash backup.sh"
+    - name: "SendReports"
+      schedule: "0 18 * * 1-5"
+      command: "python send_reports.py"
 
-tasks:
-  - name: "BackupData"
-    schedule: "0 2 * * *"
-    command: "bash backup.sh"
-  - name: "SendReports"
-    schedule: "0 18 * * 1-5"
-    command: "python send_reports.py"
-
-Task Schedule Syntax:
+# Task Schedule Syntax:
 
 The task schedule follows the cron syntax, allowing you to define precise execution times for your tasks. For more information on the cron syntax, refer to Cron Expression.
 Contribution:
 
 Contributions and feature requests are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-License:
+
+# License:
 
 This project is licensed under the MIT License.
