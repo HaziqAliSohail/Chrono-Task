@@ -22,16 +22,6 @@ Build and Run:
     go build
     ./Chrono-Task
 
-Example Configuration (config.yaml):
-
-    tasks:
-    - name: "BackupData"
-      schedule: "0 2 * * *"
-      command: "bash backup.sh"
-    - name: "SendReports"
-      schedule: "0 18 * * 1-5"
-      command: "python send_reports.py"
-
 # Task Schedule Syntax:
 
 The task schedule follows the cron syntax, allowing you to define precise execution times for your tasks. For more information on the cron syntax, refer to Cron Expression.
